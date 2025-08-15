@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+
+    <!--Fonts -->
+    <style>
+        @font-face {
+            font-family: title_texte;
+            src: url(/Project_do_stage/Assets/Fonts/Anja\ Eliane\ accent002.ttf)
+        }
+
+        @font-face {
+            font-family: big;
+            src: url(/Project_do_stage/Assets/Fonts/Heavitas.ttf)
+        }
+
+        @font-face {
+            font-family: medium;
+            src: url(/Project_do_stage/Assets/Fonts/Coolvetica\ Rg.otf)
+        }
+
+        @font-face {
+            font-family: small;
+            src: url(/Project_do_stage/Assets/Fonts/ComicNeueSansID.ttf)
+        }
+    </style>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+
+            overflow: hidden;
+        }
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+            filter: brightness(0.4);
+        }
+
+        .content {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 650px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.6));
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: big;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .home-link {
+            font-family: small;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            border-radius: 50px;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .home-link:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <video autoplay muted loop id="video-background">
+        <!-- Replace with your own video or use this sample -->
+        <source src="/Project_do_stage/Assets/Videos/bigvideo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="content">
+        <img src="/Project_do_stage/Assets/Logos/logo_ktba.png" alt="Company Logo" class="logo">
+        <h1>Something Went Wrong</h1>
+        <a href="/Project_do_stage/home.php" class="home-link">Return Home</a>
+    </div>
+</body>
+
+</html>

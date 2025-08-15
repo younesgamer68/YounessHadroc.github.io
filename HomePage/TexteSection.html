@@ -1,0 +1,198 @@
+<!--Fonts -->
+<style>
+    @font-face {
+        font-family: title_texte;
+        src: url(/Project_do_stage/Assets/Fonts/Anja\ Eliane\ accent002.ttf)
+    }
+
+    @font-face {
+        font-family: big;
+        src: url(/Project_do_stage/Assets/Fonts/Heavitas.ttf)
+    }
+
+    @font-face {
+        font-family: medium;
+        src: url(/Project_do_stage/Assets/Fonts/Coolvetica\ Rg.otf)
+    }
+
+    @font-face {
+        font-family: small;
+        src: url(/Project_do_stage/Assets/Fonts/ComicNeueSansID.ttf)
+    }
+</style>
+
+<style>
+    .knowledge-section {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        padding: 80px 20px;
+        text-align: center;
+        margin-top: 100px;
+        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .knowledge-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .knowledge-title {
+        font-size: 2.5rem;
+        color: #24262b;
+        margin-bottom: 20px;
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+        font-family: big;
+    }
+
+    .knowledge-title:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background: #b5985a;
+        border-radius: 2px;
+    }
+
+    .knowledge-description {
+        font-size: 1.2rem;
+        color: #5a6a7e;
+        line-height: 1.7;
+        margin-bottom: 50px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .knowledge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .knowledge-item {
+        background: white;
+        border-radius: 12px;
+        padding: 30px 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .knowledge-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .knowledge-item:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #24262b, #b5985a);
+    }
+
+    .knowledge-icon {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #24262b, #b5985a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .knowledge-text {
+        font-size: 1.3rem;
+        color: #b5985a;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .knowledge-hint {
+        font-size: 0.95rem;
+        color: #24262b;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .knowledge-item:hover .knowledge-hint {
+        opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        .knowledge-title {
+            font-size: 2rem;
+        }
+
+        .knowledge-description {
+            font-size: 1.05rem;
+        }
+
+        .knowledge-grid {
+            grid-template-columns: 1fr;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+</style>
+
+<section class="knowledge-section">
+    <div class="knowledge-container">
+        <h2 class="knowledge-title">Learn more about Eyewear</h2>
+        <p class="knowledge-description">
+            Everything you need to know about glasses, lenses, and eye care.
+            Click any topic below to learn more through our trusted resources.
+        </p>
+
+        <div class="knowledge-grid">
+            <div class="knowledge-item" onclick="searchGoogle('How to choose the right lens material for my glasses')">
+                <div class="knowledge-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <div class="knowledge-text">Lens Materials Guide</div>
+                <div class="knowledge-hint">Click to learn more</div>
+            </div>
+
+            <div class="knowledge-item" onclick="searchGoogle('Blue light glasses effectiveness and benefits')">
+                <div class="knowledge-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="knowledge-text">Blue Light Protection</div>
+                <div class="knowledge-hint">Click to learn more</div>
+            </div>
+
+            <div class="knowledge-item" onclick="searchGoogle('How to properly clean and maintain eyeglasses')">
+                <div class="knowledge-icon">
+                    <i class="fas fa-broom"></i>
+                </div>
+                <div class="knowledge-text">Glasses Care Tips</div>
+                <div class="knowledge-hint">Click to learn more</div>
+            </div>
+
+            <div class="knowledge-item" onclick="searchGoogle('Transition lenses pros and cons')">
+                <div class="knowledge-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="knowledge-text">Photochromic Lenses</div>
+                <div class="knowledge-hint">Click to learn more</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function searchGoogle(query) {
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+    }
+</script>

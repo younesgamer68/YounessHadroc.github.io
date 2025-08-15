@@ -1,0 +1,340 @@
+<!--Fonts -->
+<style>
+    @font-face {
+        font-family: title_texte;
+        src: url(/Project_do_stage/Assets/Fonts/Anja\ Eliane\ accent002.ttf)
+    }
+
+    @font-face {
+        font-family: big;
+        src: url(/Project_do_stage/Assets/Fonts/Heavitas.ttf)
+    }
+
+    @font-face {
+        font-family: medium;
+        src: url(/Project_do_stage/Assets/Fonts/Coolvetica\ Rg.otf)
+    }
+
+    @font-face {
+        font-family: small;
+        src: url(/Project_do_stage/Assets/Fonts/ComicNeueSansID.ttf)
+    }
+</style>
+
+<style>
+    .container-42a {
+        max-width: 1200px;
+        margin: 40px auto;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .title-7b3 {
+        font-size: 2.6rem;
+        color: #24262b;
+        margin-bottom: 10px;
+        font-weight: 600px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: big;
+    }
+
+    .tag-9c1 {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 30px;
+        font-family: small;
+    }
+
+    .powered-3d8 {
+        font-size: 0.8rem;
+        color: #5f5e5e;
+        margin-top: 20px;
+        font-style: italic;
+    }
+
+    .slider-5e2 {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+
+    .wrapper-1f4 {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
+
+    .group-6g7 {
+        display: flex;
+        flex: 0 0 100%;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    .photo-8h9 {
+        width: 23%;
+        margin: 0 5px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .photo-8h9:hover {
+        transform: scale(1.03);
+    }
+
+    .image-2i3 {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .arrow-4j5 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #7c7d7e00;
+        color: #24262b;
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border-radius: 50%;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.336);
+        margin: auto 5px;
+    }
+
+    .arrow-4j5:hover {
+        background-color: #b5985a;
+        color: white;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .prev-6k7 {
+        left: 0;
+    }
+
+    .next-1l8 {
+        right: 0;
+    }
+
+    .dots-9m2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .dot-3n4 {
+        width: 12px;
+        height: 12px;
+        background-color: #bbb;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dot-3n4.active {
+        background-color: #24262b;
+        transform: scale(1.3);
+    }
+
+    @media (max-width: 768px) {
+        .title-7b3 {
+            font-size: 1.8rem;
+        }
+
+        .photo-8h9 {
+            width: 48%;
+            margin-bottom: 15px;
+        }
+
+        .group-6g7 {
+            flex-wrap: wrap;
+        }
+
+        .arrow-4j5 {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .title-7b3 {
+            font-size: 1.5rem;
+        }
+
+        .photo-8h9 {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<div class="container-42a">
+    <h1 class="title-7b3">LOOKS WE LOVE FROM YOU</h1>
+    <p class="tag-9c1">Tag us on social with <strong>#Eye Wear</strong></p>
+
+    <div class="slider-5e2">
+        <button class="arrow-4j5 prev-6k7" aria-label="Previous photos">&#10094;</button>
+
+        <div class="wrapper-1f4" id="wrapperX1f4">
+            <!-- First group of 4 photos -->
+            <div class="group-6g7 active" id="groupA6g7">
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1547726508-6192d121c10f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2xhc3NlcyUyMHNlbGZpZXxlbnwwfDF8MHx8fDA%3D"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1585636548840-d6f68632d2bf?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2xhc3NlcyUyMHNlbGZpZXxlbnwwfDF8MHx8fDA%3D"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://plus.unsplash.com/premium_photo-1752644060190-ddae9e017b34?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGdsYXNzZXMlMjBzZWxmaWV8ZW58MHwxfDB8fHww"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2xhc3Nlc3xlbnwwfDF8MHx8fDA%3D"
+                        alt="Customer look" class="image-2i3">
+                </div>
+            </div>
+
+            <!-- Second group of 4 photos -->
+            <div class="group-6g7" id="groupB6g7">
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1552337557-45792b252a2e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3VuZ2xhc3Nlc3xlbnwwfDF8MHx8fDA%3D"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1610555423081-85ec0b8eabac?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN1bmdsYXNzZXN8ZW58MHwxfDB8fHww"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://plus.unsplash.com/premium_photo-1679439492688-9d8fea1dd0fa?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGdsYXNzZXN8ZW58MHwxfDB8fHww"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1550480082-dd9c35032f45?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGdsYXNzZXN8ZW58MHwxfDB8fHww"
+                        alt="Customer look" class="image-2i3">
+                </div>
+            </div>
+
+            <!-- Third group of 4 photos -->
+            <div class="group-6g7" id="groupC6g7">
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1524255684952-d7185b509571?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2xhc3Nlc3xlbnwwfDF8MHx8fDA%3D"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1525786210598-d527194d3e9a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGdsYXNzZXN8ZW58MHwxfDB8fHww"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1594434804563-ecbee683fd49?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdsYXNzZXN8ZW58MHwxfDB8fHww"
+                        alt="Customer look" class="image-2i3">
+                </div>
+
+                <div class="photo-8h9">
+                    <img src="https://images.unsplash.com/photo-1605813808456-26c16c0dfb77?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VuZ2xhc3Nlc3xlbnwwfDF8MHx8fDA%3D"
+                        alt="Customer look" class="image-2i3">
+                </div>
+            </div>
+        </div>
+
+        <button class="arrow-4j5 next-1l8" aria-label="Next photos">&#10095;</button>
+    </div>
+
+    <div class="dots-9m2">
+        <span class="dot-3n4 active"></span>
+        <span class="dot-3n4"></span>
+        <span class="dot-3n4"></span>
+    </div>
+
+    <p class="powered-3d8">Hadroc's Work</p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const wrapperX = document.getElementById('wrapperX1f4');
+        const groups = [
+            document.getElementById('groupA6g7'),
+            document.getElementById('groupB6g7'),
+            document.getElementById('groupC6g7')
+        ];
+        const dots = document.querySelectorAll('.dot-3n4');
+        const prevBtn = document.querySelector('.prev-6k7');
+        const nextBtn = document.querySelector('.next-1l8');
+        let currentIndex = 0;
+        const groupCount = groups.length;
+        let autoSlideInterval;
+
+        function updateSlider() {
+            const offset = -currentIndex * 100;
+            wrapperX.style.transform = `translateX(${offset}%)`;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function nextGroup() {
+            currentIndex = (currentIndex + 1) % groupCount;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function prevGroup() {
+            currentIndex = (currentIndex - 1 + groupCount) % groupCount;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextGroup, 3000);
+        }
+
+        nextBtn.addEventListener('click', nextGroup);
+        prevBtn.addEventListener('click', prevGroup);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+                resetAutoSlide();
+            });
+        });
+
+        // Auto-rotate groups every 3 seconds
+        autoSlideInterval = setInterval(nextGroup, 3000);
+
+        // Pause auto-slide on hover
+        const slider5e2 = document.querySelector('.slider-5e2');
+        slider5e2.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        slider5e2.addEventListener('mouseleave', () => {
+            resetAutoSlide();
+        });
+    });
+</script>

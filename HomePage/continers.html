@@ -1,0 +1,228 @@
+<!--Fonts -->
+<style>
+    @font-face {
+        font-family: title_texte;
+        src: url(/Project_do_stage/Assets/Fonts/Anja\ Eliane\ accent002.ttf)
+    }
+
+    @font-face {
+        font-family: big;
+        src: url(/Project_do_stage/Assets/Fonts/Heavitas.ttf)
+    }
+
+    @font-face {
+        font-family: medium;
+        src: url(/Project_do_stage/Assets/Fonts/Coolvetica\ Rg.otf)
+    }
+
+    @font-face {
+        font-family: small;
+        src: url(/Project_do_stage/Assets/Fonts/ComicNeueSansID.ttf)
+    }
+</style>
+
+<style>
+    .container29 {
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        /* Changed from wrap to nowrap */
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        padding: 20px;
+        width: 100%;
+
+        /* Added for very small screens */
+    }
+
+    .card29 {
+        width: calc(33.33% - 20px);
+        /* Flexible width */
+        min-width: 250px;
+        /* Minimum width before scaling */
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        /* Prevent cards from shrinking below min-width */
+    }
+
+    .image-container29 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        /* Maintain square aspect ratio */
+
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+    }
+
+    .image-container29:hover {
+        transform: translateY(-10px);
+    }
+
+    .image-link29 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .card-image29 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+
+    .image-link29:hover .card-image29 {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+
+    .card-content29 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .card29 h3 {
+        margin-top: 0;
+        font-size: 22px;
+        color: #222;
+        font-family: big;
+    }
+
+    .card29 p {
+        color: #666;
+        line-height: 1.5;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-family: small;
+    }
+
+    .btn29 {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #24262b;
+        color: #24262b;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+        font-family: medium;
+    }
+
+    .btn29:hover {
+        border: 1px solid #b5985a;
+        color: #b5985a;
+        transform: scale(1.03);
+    }
+
+    .sale-badge29 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #ff5252;
+        color: white;
+        padding: 5px 8px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        z-index: 2;
+        font-family: small;
+    }
+
+    @media (max-width: 900px) {
+        .card29 {
+            min-width: 150px;
+            /* Smaller cards on smaller screens */
+        }
+
+        .card29 h3 {
+            font-size: 18px;
+        }
+
+        .card29 p {
+            font-size: 14px;
+        }
+
+        .btn29 {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .card29 {
+            min-width: 140px;
+            /* Even smaller cards on very small screens */
+        }
+
+        .card29 h3 {
+            font-size: 16px;
+        }
+
+        .sale-badge29 {
+            font-size: 12px;
+            padding: 3px 6px;
+        }
+    }
+</style>
+
+<div class="container29">
+
+    <!-- First Card -->
+    <div class="card29">
+        <div class="image-container29">
+            <a href="/Project_do_stage/GalleryFiles/MainGallery.php?category=Discount" class="image-link29">
+                <span class="sale-badge29">50% OFF</span>
+                <img src="https://img.ebdcdn.com/cms/Desktop_570x570_English_4bb075e9dc.jpg?q=70&im=Resize,width=855,height=855,aspect=fill&seo=08-30-A2-banner-update-d"
+                    alt="Glasses On Sale" class="card-image29">
+            </a>
+        </div>
+        <div class="card-content29">
+            <h3>Glasses Dsicounts</h3>
+            <p>Discover amazing deals on stylish eyewear with discounts up to 50% off. Refresh your look without
+                breaking the bank!
+            </p>
+            <a href="/Project_do_stage/GalleryFiles/MainGallery.php?category=Discount" class="btn29">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- Second Card -->
+    <div class="card29">
+        <div class="image-container29">
+            <a href="/Project_do_stage/EyeExam/eye_test.php" class="image-link29">
+                <span class="sale-badge29">50% OFF</span>
+                <img src="https://images.unsplash.com/photo-1539036776273-021ec1d78bec?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Glasses On Sale" class="card-image29">
+            </a>
+        </div>
+        <div class="card-content29">
+            <h3>Free Eye Test</h3>
+            <p>Take our quick and easy online vision test to check your eyesight from the comfort of your home. No
+                appointment needed!
+            </p>
+            <a href="/Project_do_stage/EyeExam/eye_test.php" class="btn29">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- Third Card -->
+    <div class="card29">
+        <div class="image-container29">
+            <a href="/Project_do_stage/Files/find_store.php" class="image-link29">
+                <span class="sale-badge29">50% OFF</span>
+                <img src="https://images.unsplash.com/photo-1633351813330-f4ba356bcb2c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Glasses On Sale" class="card-image29">
+            </a>
+        </div>
+        <div class="card-content29">
+            <h3>find stores</h3>
+            <p>Locate our nearest optical stores where you can try on frames, get professional eye exams, and receive
+                personalized service.
+            </p>
+            <a href="/Project_do_stage/Files/find_store.php" class="btn29">Shop Now</a>
+        </div>
+    </div>
+</div>
