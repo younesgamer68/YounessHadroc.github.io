@@ -1,0 +1,354 @@
+<!--Fonts -->
+<style>
+    @font-face {
+        font-family: title_texte_1566;
+        src: url(/Project_do_stage/Assets/Fonts/Anja\ Eliane\ accent002.ttf)
+    }
+
+    @font-face {
+        font-family: big_1566;
+        src: url(/Project_do_stage/Assets/Fonts/Heavitas.ttf)
+    }
+
+    @font-face {
+        font-family: medium_1566;
+        src: url(/Project_do_stage/Assets/Fonts/Coolvetica\ Rg.otf)
+    }
+
+    @font-face {
+        font-family: small_1566;
+        src: url(/Project_do_stage/Assets/Fonts/ComicNeueSansID.ttf)
+    }
+</style>
+
+
+<style>
+    /* Main Container */
+    .main-container_1566 {
+        position: relative;
+        width: 100%;
+        max-width: 1400px;
+        height: 535px;
+        margin: 0 auto;
+    }
+
+    /* Trust Badges Styles */
+    .trust-badges_1566 {
+        position: absolute;
+        top: 84.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 15px 25px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 5;
+        width: 80%;
+        max-width: 900px;
+    }
+
+    .badge_1566 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        font-family: small_1566;
+    }
+
+    .badge_1566:hover {
+        color:black;
+        text-decoration: underline;
+    }
+
+    .badge-icon_1566 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .reviews_1566 {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: small_1566;
+    }
+
+    .star-rating_1566 {
+        color: #ffb400;
+        font-size: 14px;
+    }
+
+    /* Photo Navigation Styles */
+    .photo-navigation_1566 {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        background: #f0f0f0;
+    }
+
+    .photo-container_1566 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo-container_1566 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .slider-img_1566 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: #ddd;
+    }
+
+    .nav-arrow_1566 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #7c7d7e00;
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.459);
+        margin: auto 5px;
+        border-radius: 50%;
+    }
+
+    .nav-arrow_1566:hover {
+        background-color: #b5985a;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .arrow-left_1566 {
+        left: 25px;
+    }
+
+    .arrow-right_1566 {
+        right: 25px;
+    }
+
+    /*photo indicator*/
+    .photo-indicators_1566 {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 50px;
+        z-index: 10;
+    }
+
+    .photo-indicators_1566 span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #24262b;
+        cursor: pointer;
+        transition: all 0.3s;
+
+    }
+
+    .photo-indicators_1566 .active_1566 {
+        background: #b5985a;
+        transform: scale(1.2);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .trust-badges_1566 {
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        .badge_1566 {
+            white-space: normal;
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .reviews_1566 {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .photo-navigation_1566 {
+            height: 400px;
+        }
+
+        .nav-arrow_1566 {
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .photo-indicators_1566 {
+            bottom: 15px;
+            gap: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .trust-badges_1566 {
+            gap: 8px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .photo-navigation_1566 {
+            height: 350px;
+        }
+
+        .nav-arrow_1566 {
+            padding: 8px;
+            font-size: 20px;
+        }
+
+        .photo-indicators_1566 {
+            bottom: 10px;
+            gap: 8px;
+        }
+    }
+</style>
+
+<div class="main-container_1566">
+    <!-- Trust Badges Section - Positioned over the slider -->
+    <div class="trust-badges_1566">
+        <a href="/Project_do_stage/Files/find_store.php" class="badge_1566">
+            <span class="badge-icon_1566"></span>
+            <span> 24/7 Find Stors</span>
+        </a>
+
+        <a href="/Project_do_stage/GalleryFiles/favorites.php" class="badge_1566">
+            <span class="badge-icon_1566">❤</span>
+            <span>Your Favorites</span>
+        </a>
+
+        <a href="/Project_do_stage/EyeExam/eye_test.php" class="badge_1566">
+            <span class="badge-icon_1566">©</span>
+            <span>Vision Test</span>
+        </a>
+
+        <div class="reviews_1566">
+            <a href="/Project_do_stage/index.php" class="badge_1566">
+                <span class="badge-icon_1566">✓</span>
+                <span>EyeWear</span>
+            </a>
+            <span class="star-rating_1566">☆★★★★</span>
+            <span>216k+ Reviews</span>
+        </div>
+    </div>
+
+    <div class="photo-indicators_1566" id="indicators-container_1566">
+        <!-- Indicators will be added here by JavaScript -->
+    </div>
+
+    <!-- Photo Slider Section -->
+    <div class="photo-navigation_1566">
+        <a href="/Project_do_stage/GalleryFiles/MainGallery.php?category=Newer">
+            <div class="photo-container_1566" id="photo-container_1566">
+                <!-- Slides will be added here by JavaScript -->
+            </div>
+        </a>
+
+        <button class="nav-arrow_1566 arrow-left_1566" id="prev-btn_1566">&#10094;</button>
+        <button class="nav-arrow_1566 arrow-right_1566" id="next-btn_1566">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    //main photo slider logic
+    const images_1566 = [
+        "https://img.ebdcdn.com/cms/H1_Desktop_1600_520_f121455cde.jpg?q=70&im=Resize,width=2400,height=780,aspect=fill&seo=06-02-RB-Meta-d",
+        "https://img.ebdcdn.com/cms/H1_Desktop_1600_520_fbc4f722a6.jpg?q=70&im=Resize,width=2400,height=780,aspect=fill&seo=08-04-back-to-you-collection-d",
+        "https://images.unsplash.com/photo-1565428730183-830036459022?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1601782744132-f08f10b3343e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ];
+
+    const container_1566 = document.getElementById('photo-container_1566');
+    const indicators_1566 = document.getElementById('indicators-container_1566');
+
+    let index_1566 = 0;
+    let interval_1566;
+
+    // Create slides and indicators
+    images_1566.forEach((src, i) => {
+        const img_1566 = document.createElement('img');
+        img_1566.src = src;
+        img_1566.alt = `Slide ${i + 1}`;
+        img_1566.classList.add('slider-img_1566');
+        container_1566.appendChild(img_1566);
+
+        const dot_1566 = document.createElement('span');
+        dot_1566.addEventListener('click', () => goToSlide_1566(i));
+        indicators_1566.appendChild(dot_1566);
+    });
+
+    const updateSlider_1566 = () => {
+        container_1566.style.transform = `translateX(-${index_1566 * 100}%)`;
+        document.querySelectorAll('.photo-indicators_1566 span').forEach((dot, i) => {
+            dot.classList.toggle('active_1566', i === index_1566);
+        });
+    };
+
+    const nextSlide_1566 = () => {
+        index_1566 = (index_1566 + 1) % images_1566.length;
+        updateSlider_1566();
+    };
+
+    const prevSlide_1566 = () => {
+        index_1566 = (index_1566 - 1 + images_1566.length) % images_1566.length;
+        updateSlider_1566();
+    };
+
+    const goToSlide_1566 = (i) => {
+        index_1566 = i;
+        updateSlider_1566();
+    };
+
+    document.getElementById('prev-btn_1566').addEventListener('click', () => {
+        prevSlide_1566();
+        resetInterval_1566();
+    });
+
+    document.getElementById('next-btn_1566').addEventListener('click', () => {
+        nextSlide_1566();
+        resetInterval_1566();
+    });
+
+    const startAutoSlide_1566 = () => {
+        interval_1566 = setInterval(nextSlide_1566, 3000);
+    };
+
+    const resetInterval_1566 = () => {
+        clearInterval(interval_1566);
+        startAutoSlide_1566();
+    };
+
+    // Init
+    updateSlider_1566();
+    startAutoSlide_1566();
+</script>
